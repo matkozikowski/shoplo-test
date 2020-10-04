@@ -1,0 +1,5 @@
+services:
+  App\Form\Type\ProductType:
+    class: App\Form\Type\ProductType
+    tags:
+      - { name: form.type }

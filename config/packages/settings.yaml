@@ -1,0 +1,18 @@
+parameters:
+  settings:
+    languages: ['at', 'hu', 'si', 'sk']
+#    kopernikus:
+#      language_at:
+#        container: 'App\Generator\Kopernikus\KopernikusATGenerator'
+#        prefix: 'at'
+#      language_hu:
+#        container: 'App\Generator\Kopernikus\KopernikusHUGenerator'
+#        prefix: 'hu'
+#    ballanced:
+#      language_at:
+#        container: 'App\Generator\Ballanced\BallancedATGenerator'
+#        prefix: 'at'
+#      language_hu:
+#        container: 'App\Generator\Ballanced\BallancedHUGenerator'
+#        prefix: 'hu'
+

@@ -1,0 +1,8 @@
+services:
+  App\Chain\ServiceChain:
+    class: App\Chain\ServiceChain
+    public: false
+
+  App\Chain\GeneratorChain:
+    class: App\Chain\GeneratorChain
+    public: false
