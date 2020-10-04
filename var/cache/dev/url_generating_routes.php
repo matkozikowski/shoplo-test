@@ -5,6 +5,4 @@
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
-    'list' => [['product'], ['_controller' => 'App\\Controller\\HomeController::list'], [], [['text', '/list'], ['variable', '/', '[^/]++', 'product', true]], [], []],
-    'generate' => [[], ['_controller' => 'App\\Controller\\HomeController::generate'], [], [['text', '/generate']], [], []],
 ];
