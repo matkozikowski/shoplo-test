@@ -1,0 +1,32 @@
+App\Entity\ProductImage:
+  type: entity
+  table: product_image
+  repositoryClass: App\Repository\ProductImageRepository
+  id:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+  fields:
+    path:
+      type: string
+      column: name
+      nullable: false
+    status:
+      type: string
+      column: image
+      nullable: true
+    createdAt:
+      type: datetime
+      gedmo:
+        timestampable:
+          on: create
+      column: created_at
+  manyToOne:
+    product:
+      targetEntity: App\Entity\Product
+      inversedBy: productImages
+      joinColumn:
+        name: product_id
+        referencedColumnName: id

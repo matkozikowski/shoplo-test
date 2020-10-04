@@ -1,0 +1,48 @@
+App\Entity\Product:
+  type: entity
+  table: product
+  repositoryClass: App\Repository\ProductRepository
+  id:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      column: name
+      nullable: false
+    image:
+      type: string
+      column: image
+      nullable: true
+    count:
+      type: integer
+      column: count
+      nullable: true
+    price:
+      type: integer
+      column: price
+      nullable: false
+    promoPrice:
+      type: integer
+      column: promo_price
+      nullable: true
+    status:
+      type: boolean
+      column: status
+      nullable: false
+    createdAt:
+      type: datetime
+      gedmo:
+        timestampable:
+          on: create
+      column: created_at
+  oneToMany:
+    productImages:
+      targetEntity: App\Entity\ProductImage
+      mappedBy: product
+      joinColumn:
+        name: id
+        referencedColumnName: image_id
