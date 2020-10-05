@@ -4,4 +4,13 @@ index:
   controller: App\Controller\HomeController::index
   methods: [GET]
 
+cart_list:
+  path: /cart/list
+  controller: App\Controller\CartController::list
+  methods: [GET]
+
+cart_add:
+  path: /cart/add
+  controller: App\Controller\CartController::addItem
+  methods: [POST]
 

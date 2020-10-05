@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Repository\ProductRepository;
-use App\Service\PaginationService;
 use App\Model\DTO\Result;
+use App\Entity\Product;
 
 class ProductService
 {
@@ -31,5 +31,10 @@ class ProductService
         return $this->paginationService->getResult(
             $this->productRepository->findProducts()
         );
+    }
+
+    public function getProductById(int $productId): Product
+    {
+        return $this->productRepository->findOneBy(['id' => $productId, 'status' => true]);
     }
 }

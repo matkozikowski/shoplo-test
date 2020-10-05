@@ -6,5 +6,5 @@ namespace App\Factory;
 
 interface FactoryInterface
 {
-    public function create(?array $data = []);
+    public function create();
 }

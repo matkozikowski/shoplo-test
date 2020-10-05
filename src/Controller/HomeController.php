@@ -5,14 +5,18 @@ namespace App\Controller;
 use PHPUnit\Util\Exception;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use App\Service\ProductService;
 
 class HomeController
 {
+    /**
+     * @var Environment
+     */
     private $twig;
 
+    /**
+     * @var ProductService
+     */
     private $productService;
 
     public function __construct(Environment $twig, ProductService $productService)

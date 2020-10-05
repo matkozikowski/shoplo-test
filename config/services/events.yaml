@@ -1,0 +1,6 @@
+services:
+  App\EventListener\CartListener:
+    arguments:
+      - '@App\Service\CartManager'
+    tags:
+      - { name: kernel.event_subscriber }

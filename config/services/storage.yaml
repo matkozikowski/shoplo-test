@@ -1,0 +1,4 @@
+services:
+  App\Storage\CartStorage:
+    arguments:
+      - '@session'

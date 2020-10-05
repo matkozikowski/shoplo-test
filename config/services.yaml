@@ -13,3 +13,11 @@ services:
         arguments:
             - '@twig'
             - '@App\Service\ProductService'
+
+    App\Controller\CartController:
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@twig'
+            - '@event_dispatcher'
+            - '@App\Service\ProductService'
+            - '@App\Service\CartManager'

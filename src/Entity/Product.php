@@ -9,7 +9,7 @@ use DateTimeInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
-class Product
+class Product implements CartItemInterface
 {
     /**
      * @var int
@@ -141,7 +141,7 @@ class Product
         return $this->productImages;
     }
 
-    public function setComment(ProductImage $productImage): void
+    public function setProductImage(ProductImage $productImage): void
     {
         if (!$this->productImages->contains($productImage)) {
             $this->productImages[] = $productImage;

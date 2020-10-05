@@ -1,0 +1,5 @@
+services:
+  App\Service\CartManager:
+    arguments:
+      - '@App\Storage\CartStorage'
+      - '@App\Factory\CartFactory'
