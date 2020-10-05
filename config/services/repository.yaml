@@ -1,0 +1,4 @@
+services:
+  App\Repository\ProductRepository:
+    arguments:
+      - '@Doctrine\Persistence\ManagerRegistry'

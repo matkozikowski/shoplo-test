@@ -96,9 +96,9 @@ class Product
         $this->count = $count;
     }
 
-    public function getPrice(): ?int
+    public function getPrice(): ?float
     {
-        return $this->price;
+        return (float) $this->price / 100;
     }
 
     public function setPrice(int $price): void
@@ -106,9 +106,9 @@ class Product
         $this->price = $price;
     }
 
-    public function getPromoPrice(): ?int
+    public function getPromoPrice(): ?float
     {
-        return $this->promoPrice;
+        return (float) $this->promoPrice / 100;
     }
 
     public function setPromoPrice(?int $promoPrice): void

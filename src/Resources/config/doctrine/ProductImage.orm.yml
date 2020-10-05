@@ -11,12 +11,8 @@ App\Entity\ProductImage:
   fields:
     path:
       type: string
-      column: name
+      column: path
       nullable: false
-    status:
-      type: string
-      column: image
-      nullable: true
     createdAt:
       type: datetime
       gedmo:

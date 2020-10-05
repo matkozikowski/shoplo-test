@@ -90,6 +90,9 @@
     "php": {
         "version": "7.2"
     },
+    "symfony/asset": {
+        "version": "v5.1.7"
+    },
     "symfony/doctrine-bridge": {
         "version": "v5.1.7"
     },

@@ -20,11 +20,6 @@ class ProductImage
     private $path;
 
     /**
-     * @var bool
-     */
-    private $status;
-
-    /**
      * @var DateTime
      */
     private $createdAt;
@@ -47,16 +42,6 @@ class ProductImage
     public function setPath(string $path): void
     {
         $this->path = $path;
-    }
-
-    public function getStatus(): ?bool
-    {
-        return $this->status;
-    }
-
-    public function setStatus(bool $status): void
-    {
-        $this->status = $status;
     }
 
     public function getCreatedAt(): ?DateTimeInterface

@@ -12,3 +12,4 @@ services:
         tags: ['controller.service_arguments']
         arguments:
             - '@twig'
+            - '@App\Service\ProductService'

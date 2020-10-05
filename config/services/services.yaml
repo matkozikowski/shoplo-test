@@ -1,3 +1,10 @@
 services:
+  App\Service\ProductService:
+    arguments:
+      - '@App\Repository\ProductRepository'
+      - '@App\Service\PaginationService'
 
-
+  App\Service\PaginationService:
+    arguments:
+      - '@request_stack'
+      - '@App\Factory\ResultFactory'
