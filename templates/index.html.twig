@@ -16,6 +16,10 @@
                             {% for gallery in item.productImages %}
                                 <img class="pic-2" src="{{ asset(render_image(gallery.path, item.id)) }}">
                             {% endfor %}
+
+                            {% if item.productImages is empty %}
+                                <img class="pic-2" src="{{ asset(render_image(item.image, item.id)) }}">
+                            {% endif %}
                         </a>
                         <ul class="social">
                             <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
