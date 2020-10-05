@@ -22,7 +22,7 @@ class ProductRepository extends ServiceEntityRepository
             ->leftJoin('p.productImages', 'pi')
             ->andWhere('p.status = :status')
             ->setParameter('status', true)
-            ->orderBy('p.id', 'ASC')
+            ->orderBy('p.createdAt', 'DESC')
             ->getQuery()
             ->getResult()
         ;
