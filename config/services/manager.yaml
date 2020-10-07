@@ -1,5 +1,6 @@
 services:
   App\Service\CartManager:
+    public: true
     arguments:
       - '@App\Storage\CartStorage'
       - '@App\Factory\CartFactory'

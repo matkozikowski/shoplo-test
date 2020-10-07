@@ -1,5 +1,6 @@
 services:
   App\Service\ProductService:
+    public: true
     arguments:
       - '@App\Repository\ProductRepository'
       - '@App\Service\PaginationService'
@@ -8,3 +9,11 @@ services:
     arguments:
       - '@request_stack'
       - '@App\Factory\ResultFactory'
+
+  App\Service\LoggerService:
+    arguments:
+      - '@logger'
+
+  App\Service\MailSenderService:
+    arguments:
+      - '@Symfony\Component\Mailer\MailerInterface'

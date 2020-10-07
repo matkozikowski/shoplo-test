@@ -2,5 +2,7 @@ services:
   App\EventListener\CartListener:
     arguments:
       - '@App\Service\CartManager'
+      - '@App\Service\LoggerService'
+      - '@App\Service\MailSenderService'
     tags:
       - { name: kernel.event_subscriber }
