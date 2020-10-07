@@ -1,6 +1,7 @@
 # shoplo-test-app
 Required:
 - symfony
+- docker-composer
 
-Example poker app with input file
-- webserver run: ``symfony server:start``
+To run application:
+1. run /bin/bash run.sh
