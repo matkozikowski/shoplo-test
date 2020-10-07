@@ -15,17 +15,20 @@ class MailSenderService
      */
     private $mailer;
 
-    public function __construct(MailerInterface $mailer)
+    private $parameters;
+
+    public function __construct(MailerInterface $mailer, $parameters)
     {
         $this->mailer = $mailer;
+        $this->parameters = $parameters;
     }
 
     public function send(string $message): void
     {
         $email = (new Email())
-            ->from('test2@matkoz.linuxpl.eu')
-            ->to('matkozikowski@gmail.com')
-            ->subject('Shop Cart Notification')
+            ->from($this->parameters['mail_from'])
+            ->to($this->parameters['mail_to'])
+            ->subject($this->parameters['subject'])
             ->text($message)
             ->html($message);
 

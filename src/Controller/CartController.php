@@ -46,11 +46,6 @@ class CartController
 
     public function list(): Response
     {
-        $cart = $this->cartManager->getCart();
-
-        $cartEvent = new CartEvent($cart);
-        $this->eventDispatcher->dispatch($cartEvent, CartEvents::CART_ITEM_ADD);
-
         return new Response(
             $this->twig->render('cart.html.twig', ['cart' => $this->cartManager->getCart()])
         );

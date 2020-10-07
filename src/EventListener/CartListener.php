@@ -46,7 +46,7 @@ class CartListener implements EventSubscriberInterface
 
     public function addItem(Event $event): void
     {
-//        $this->mailSenderService->send(MessageEnum::NOTIFICATION_ADD_CART);
+        $this->mailSenderService->send(MessageEnum::NOTIFICATION_ADD_CART);
         $this->loggerService->log(MessageEnum::NOTIFICATION_ADD_CART);
     }
 

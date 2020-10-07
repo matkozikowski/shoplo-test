@@ -1,4 +1,8 @@
 parameters:
+    mailer_parameters:
+        subject: 'Notification Cart'
+        mail_from: 'example@com.pl'
+        mail_to: 'example@com.pl'
 
 services:
     _defaults:

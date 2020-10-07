@@ -17,3 +17,4 @@ services:
   App\Service\MailSenderService:
     arguments:
       - '@Symfony\Component\Mailer\MailerInterface'
+      - '%mailer_parameters%'
