@@ -15,18 +15,10 @@ use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
-
-    public function getContainerExtension()
-    {
-        die('in');
-    }
-
+    
     protected function build(ContainerBuilder $container): void
     {
         parent::build($container);
-
-        $container->addCompilerPass(new ServicePass());
-        $container->addCompilerPass(new GeneratorPass());
     }
 
     protected function configureContainer(ContainerConfigurator $container): void
